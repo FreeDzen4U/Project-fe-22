@@ -143,6 +143,12 @@ body{
     object-fit: cover;
 }
 
+.card-image-pizzaPlus{  
+    width: 550px;
+    height: 250px;
+    object-fit: cover;
+}
+
 .card-text{
     padding-top: 20px;
     padding-bottom: 35px;
