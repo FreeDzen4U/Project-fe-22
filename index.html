@@ -8,6 +8,7 @@
         <title>Delivery</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/normalize.css">
     </head>
 
@@ -16,8 +17,8 @@
             <!-- Шапка сторінки -->
             <header class="header">
                 <!-- Лого -->
-                <a href="index.html" class="logo">
-                    <img src="img\logo.svg" alt="Logo" class="logo">
+                <a href="index.html" class="logo" >
+                    <img src="img\logo.svg" alt="Logo">
                 </a>
                 <input type="text" class="input input-adress" placeholder="Aдрес доставки">
                 <div class="buttons">
@@ -26,9 +27,9 @@
                         <span class="button-text">Увійти</span>
                     </button>
 
-                    <button class="button">
+                    <button class="button" id="cart-button">
                         <img src="img/shopping-cart.svg" alt="shopping cart" class="button-icon">
-                        <span class="button-text">Корзина</span>
+                        <span class="button-text">Кошик</span>
                     </button>
                 </div>
             </header>
@@ -47,10 +48,9 @@
                         <h2 class="section-title">Ресторани</h2>
                         <input type="text" class="input input-search" placeholder="Пошук страв і ресторанів">
                     </div>
-        
                                     
                     <div class="cards">
-                        <a href="restaurant.html" class="card">
+                        <a href="pizzaPlus.html" class="card animate__animated animate__fadeInUp wow" data-wow-delay="0.2s">
                             <img src="img/image-1.png" alt="image" class="card-image">
                             <div class="card-text">
                                 <div class="card-heading">
@@ -60,10 +60,9 @@
                                 <!-- card-heading -->
                                 <div class="card-info">
                                     <div class="rating">
-                                        <img src="img/rating.svg" alt="image" class="rating-star">
-                                        4.5
+                                        <img src="img/rating.svg" alt="image" class="rating-star"> 4.8
                                     </div>
-                                    <div class="price">Від 400₴</div>
+                                    <div class="price">Від 160₴</div>
                                     <div class="category">Піца</div>
                                 </div>
                                 <!-- card-info -->
@@ -71,22 +70,22 @@
                             <!-- card-text-->
                         </a>
                         <!-- card --> 
-        
-                        <a href="restaurant.html" class="card">
+                        
+                        <a href="tanuki.html" class="card animate__animated animate__fadeInUp wow" data-wow-delay="0.4s"> 
                             <img src="img/image-2.png" alt="image" class="card-image">
                             <div class="card-text">
                                 <div class="card-heading">
                                     <h3 class="card-title">Танукі</h3>
-                                    <span class="card-tag tag">50 хв</span>
+                                    <span class="card-tag tag">45 хв</span>
                                 </div>
                                 <!-- card-heading -->
                                 <div class="card-info">
                                     <div class="rating">
                                         <img src="img/rating.svg" alt="image" class="rating-star">
-                                        4.5
+                                        4.8
                                     </div>
-                                    <div class="price">Від 400₴</div>
-                                    <div class="category">Піца</div>
+                                    <div class="price">Від 300₴</div>
+                                    <div class="category">Суші, Роли</div>
                                 </div>
                                 <!-- card-info -->
                             </div>
@@ -94,7 +93,7 @@
                         </a>
                         <!-- card --> 
         
-                        <a href="restaurant.html" class="card">
+                        <a href="foodband.html" class="card animate__animated animate__fadeInUp wow" data-wow-delay="0.6s">
                             <img src="img/image-3.png" alt="image" class="card-image">
                             <div class="card-text">
                                 <div class="card-heading">
@@ -116,11 +115,11 @@
                         </a>
                         <!-- card --> 
         
-                        <a href="restaurant.html" class="card">
+                        <a href="story.html" class="card animate__animated animate__fadeInUp wow" data-wow-delay="0.2s">
                             <img src="img/image-4.png" alt="image" class="card-image">
                             <div class="card-text">
                                 <div class="card-heading">
-                                    <h3 class="card-title">Піца-Жадіна</h3>
+                                    <h3 class="card-title">Story</h3>
                                     <span class="card-tag tag">50 хв</span>
                                 </div>
                                 <!-- card-heading -->
@@ -138,7 +137,7 @@
                         </a>
                         <!-- card --> 
         
-                        <a href="restaurant.html" class="card">
+                        <a href="eatPlace.html" class="card animate__animated animate__fadeInUp wow" data-wow-delay="0.4s">
                             <img src="img/image-5.png" alt="image" class="card-image">
                             <div class="card-text">
                                 <div class="card-heading">
@@ -160,7 +159,7 @@
                         </a>
                         <!-- card --> 
         
-                        <a href="restaurant.html" class="card">
+                        <a href="pizzaBurger.html" class="card animate__animated animate__fadeInUp wow" data-wow-delay="0.6s">
                             <img src="img/image-6.png" alt="image" class="card-image">
                             <div class="card-text">
                                 <div class="card-heading">
@@ -208,5 +207,70 @@
                 <!-- /.footer-block -->
             </div>
         </footer>
+
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <h3 class="modal-title">Кошик</h3>
+                    <button class="close">&times;</button>
+                </div>
+                <!-- /.modal-header -->
+                <div class="modal-body">
+                    <div class="food-row">
+                        <span class="food-name">Суші Унагі</span>
+                        <strong class="food-price">75₴</strong>
+                        <div class="food-counter">
+                            <button class="counter-button">-</button>
+                            <span class="counter">8</span>
+                            <button class="counter-button">+</button>
+                        </div>
+                    </div>
+                    <!-- /.food-row -->
+                    <div class="food-row">
+                        <span class="food-name">Суші Ебі</span>
+                        <strong class="food-price">60₴</strong>
+                        <div class="food-counter">
+                            <button class="counter-button">-</button>
+                            <span class="counter">7</span>
+                            <button class="counter-button">+</button>
+                        </div>
+                    </div>
+                    <!-- /.food-row -->
+                    <div class="food-row">
+                        <span class="food-name">Рол Філадельфія</span>
+                        <strong class="food-price">295₴</strong>
+                        <div class="food-counter">
+                            <button class="counter-button">-</button>
+                            <span class="counter">4</span>
+                            <button class="counter-button">+</button>
+                        </div>
+                    </div>
+                    <!-- /.food-row -->
+                    <div class="food-row">
+                        <span class="food-name">Рол Золоте Руно</span>
+                        <strong class="food-price">435</strong>
+                        <div class="food-counter">
+                            <button class="counter-button">-</button>
+                            <span class="counter">4</span>
+                            <button class="counter-button">+</button>
+                        </div>
+                    </div>
+                    <!-- /.food-row -->
+                </div>
+                <!-- /.modal-body -->
+                <div class="modal-footer">
+                    <span class="modal-pricetag">3840₴</span>
+                    <div class="footer-buttons">
+                        <button class="button button-primary">Оформити замовлення</button>
+                        <button class="button">Скасувати</button>
+                    </div>
+                </div>
+                <!-- /.modal-footer -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+
+        <script src="js/wow.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
