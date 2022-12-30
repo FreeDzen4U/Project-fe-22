@@ -135,6 +135,7 @@ body{
     margin-bottom: 30px;
     flex-basis: 30%;
     text-decoration: none;
+    color: #000;
 }
 
 .card-image{  
